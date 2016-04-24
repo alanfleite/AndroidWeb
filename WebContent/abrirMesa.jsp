@@ -7,6 +7,7 @@
 
 <%
 
+
 	  String driver = "org.firebirdsql.jdbc.FBDriver";      
 	  String url = "jdbc:firebirdsql:localhost/3050:C:/datasol/database/datasol.GDB";
 	  String usuario = "SYSDBA";
