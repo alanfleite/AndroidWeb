@@ -22,20 +22,9 @@
            statement = conexao.createStatement();
            //resultset = statement.executeQuery("select USUARIO from CAD_CLI where USUARIO is not null order by USUARIO");
            
-/*           
-           String sql = "insert into RECMOVEL (fantasia, razao, cnpj, tot, totg, dataems, vendedor)" 
-        		   + " values ('" + request.getParameter("fantasia") + "', '"
-        				          + request.getParameter("razao") + "', '"
-        				       	  + request.getParameter("cnpj") + "', "
-        				          + request.getParameter("tot") + ", "
-    				        	  + request.getParameter("totg") + ", '"
-    				        	  + request.getParameter("dataems") + "', '"
-    				        	  + request.getParameter("vendedor") + "');";
-*/  
-  
   //String data = fc.dataGravarFirebird(request.getParameter("dataems"));
 
-           String sql = "insert into RECMOVEL (fantasia, razao, cnpj, tot, totg, dataems, vendedor, codvend, condpg, exportada)" 
+           String sql = "insert into RECMOVEL (fantasia, razao, cnpj, tot, totg, dataems, vendedor, codvend, condpg, codcli, exportada)" 
   		              + " values ('" + request.getParameter("fantasia") + "', '"
 				                     + request.getParameter("razao") + "', '"
 			         	      		 + request.getParameter("cnpj") + "', "
@@ -47,9 +36,10 @@
 			        	  		     + request.getParameter("vendedor") + "', '"
 			        	  		     + request.getParameter("codvend") + "', '"
   	        	  		    		 + request.getParameter("condpg") + "', '"
+  	        	  		    		 + request.getParameter("codcli") + "', '"
 			        	  		     + "N');";
 			        	  
-	System.out.println("sql " + sql);        	  
+	//System.out.println("sql " + sql);        	  
   
            int gravou = statement.executeUpdate(sql);
            if (gravou == 1){
